@@ -1,29 +1,45 @@
 # West Nile Virus Prediction in Chicago
 
 ## Project Overview
-This project focuses on analyzing and predicting the prevalence of the West Nile Virus (WNV) in Chicago based on historical mosquito trapping data. The aim is to gain insights into factors influencing WNV spread and to develop predictive models to assist in public health planning and mosquito control efforts.
+This project delves into the analysis and prediction of West Nile Virus (WNV) prevalence in Chicago, utilizing historical mosquito trapping data. The goal is to uncover the key factors influencing the spread of WNV and create predictive models that can aid public health planning and mosquito control initiatives.
 
 ## Data Source
-The dataset used in this project is provided by the City of Chicago, tracking mosquito data from 2008 to 2019. It includes information about mosquito counts, types of traps used, presence of West Nile Virus, and geographical coordinates of traps.
+The primary dataset for this study is sourced from the City of Chicago, comprising mosquito data spanning from 2008 to 2019. It encompasses diverse aspects such as mosquito counts, trap types, WNV presence, and geographical data.
 
 ## Objectives
-- Conduct a thorough Exploratory Data Analysis (EDA) to understand the dataset and identify key patterns.
-- Develop predictive models to forecast the occurrence of West Nile Virus based on environmental and mosquito trap data (in progress).
+- Conduct an in-depth Exploratory Data Analysis (EDA) to decode the dataset and highlight significant patterns.
+- Develop models to predict West Nile Virus occurrences, integrating environmental data and mosquito trap information (ongoing).
 
 ## Exploratory Data Analysis (EDA)
 ### Data Cleaning and Preprocessing
-- Converted the 'Date' column to a datetime format.
-- Handled missing values in 'Latitude' and 'Longitude' columns, especially for observations related to specific locations like O'Hare Airport.
+- The 'Date' column was transformed into a datetime format for better analysis.
+- Addressed missing values in 'Latitude' and 'Longitude', especially for specific locations like O'Hare Airport.
 
-### Key Findings
-- **Temporal Trends**: Observed higher mosquito activity in the latter half of the year, with August being the peak month.
-- **Species Analysis**: Identified Culex Pipiens and Culex Restuans as species more susceptible to WNV.
-- **Trap Efficiency**: Gravid traps were the most commonly used, but Sentinel and CDC traps showed higher efficacy in capturing mosquitoes.
-- **Temperature Correlation**: Found a general correlation between warmer temperatures and increased WNV positive cases, though with yearly variations.
+### Key Insights
+- **Temporal Patterns**: Higher mosquito activity was noted in the second half of the year, peaking in August.
+- **Species Analysis**: Culex Pipiens and Culex Restuans species demonstrated a higher susceptibility to WNV.
+- **Trap Effectiveness**: While Gravid traps were most commonly used, Sentinel and CDC traps proved more efficient in capturing mosquitoes.
+- **Temperature Influence**: A general correlation was observed between increased temperatures and WNV positive cases, albeit with annual variations.
 
 ### Visualizations
-- Histograms, box plots, and time series plots to illustrate mosquito counts, trap efficiencies, and temporal trends.
-- Dual-axis plots to show the relationship between average temperature and WNV positive cases.
+- Utilized histograms, box plots, and time series graphs to depict mosquito counts, trap effectiveness, and time-related trends.
+- Employed dual-axis plots to correlate average temperatures with the frequency of WNV positive cases.
 
-## Prediction Models (In Progress)
+## Model Building
 
+### Linear Regression
+The linear regression model aimed at predicting mosquito numbers, yielding an MSE of 169.67 and an R-squared value of 0.07. Adjustments for multicollinearity led to slight improvements, with an MSE of 173.43 and R-squared of 0.05. The model faced challenges such as low explanatory power and multicollinearity, particularly with binary variables.
+
+### Logistic Regression
+The logistic regression model, designed to predict WNV presence, achieved an accuracy of around 81%. It was more adept at predicting the absence rather than the presence of WNV. Despite modifications and variable adjustments, the model's accuracy remained consistent, emphasizing the need for more comprehensive data for prediction.
+
+### Model Limitations
+- **Linear Regression**: Faced issues like low explanatory power and multicollinearity, underscoring the complexity of predicting mosquito numbers based solely on available variables.
+- **Logistic Regression**: Although reaching an accuracy of 81%, the model's effectiveness in predicting true positives (WNV presence) was limited. The need for more diverse data, including climate and broader trap types, was evident.
+
+### Ongoing Efforts
+- Refining the models by incorporating additional relevant variables and data sources.
+- Exploring advanced modeling techniques to enhance predictive accuracy.
+
+## Conclusion
+The exploratory data analysis provided valuable insights into the factors influencing mosquito populations and WNV spread in Chicago. The prediction models, while facing limitations, offered a foundational understanding of the complex relationships involved. Ongoing efforts aim to refine these models for more accurate predictions, ultimately contributing to effective public health strategies against WNV.
