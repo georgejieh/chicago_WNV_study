@@ -8,7 +8,7 @@ The primary dataset for this study is sourced from the City of Chicago, comprisi
 
 ## Objectives
 - Conduct an in-depth Exploratory Data Analysis (EDA) to decode the dataset and highlight significant patterns.
-- Develop models to predict West Nile Virus occurrences, integrating environmental data and mosquito trap information (ongoing).
+- Develop models to predict West Nile Virus occurrences, integrating temporal data and mosquito trap information.
 
 ## Exploratory Data Analysis (EDA)
 ### Data Cleaning and Preprocessing
@@ -42,4 +42,4 @@ The logistic regression model, designed to predict WNV presence, achieved an acc
 - Exploring advanced modeling techniques to enhance predictive accuracy.
 
 ## Conclusion
-The exploratory data analysis provided valuable insights into the factors influencing mosquito populations and WNV spread in Chicago. The prediction models, while facing limitations, offered a foundational understanding of the complex relationships involved. Ongoing efforts aim to refine these models for more accurate predictions, ultimately contributing to effective public health strategies against WNV.
+The exploratory data analysis provided valuable insights into the factors influencing mosquito populations and WNV spread in Chicago. The prediction models, while facing limitations, offered a foundational understanding of the complex relationships involved. 
